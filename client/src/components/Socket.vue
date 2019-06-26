@@ -25,7 +25,7 @@
                 user: '',
                 message: '',
                 messages: [],
-                socket: io('localhost:8080'),
+                socket: io(),
             }
         },
         async mounted() {
