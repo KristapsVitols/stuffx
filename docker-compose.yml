@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  proxy:
+    build: ./nginx
+    ports:
+      - '8080:80'
+  api:
+    build: ./api
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+  client:
+    build: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
