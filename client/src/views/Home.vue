@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Socket/>
+        Hello!
     </div>
 </template>
 

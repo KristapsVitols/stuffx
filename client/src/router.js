@@ -5,13 +5,28 @@ import Home from './views/Home.vue'
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-  ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/par-mums',
+            name: 'about',
+            component: () => import('@/views/About.vue'),
+        },
+        {
+            path: '/kontakti',
+            name: 'contacts',
+            component: () => import('@/views/Contacts.vue'),
+        },
+        {
+            path: '/autorizacija',
+            name: 'authorization',
+            component: () => import('@/views/Authorization.vue'),
+        },
+    ]
 })
